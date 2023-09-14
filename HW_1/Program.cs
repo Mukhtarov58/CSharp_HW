@@ -27,25 +27,42 @@
 // Напишите программу, которая принимает на вход три числа
 // и выдаёт максимальное из этих чисел.
 
-Console.WriteLine("Enter the first number: ");
-int a = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter the first number: ");
+// int a = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Enter the second number: ");
-int b = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter the second number: ");
+// int b = Convert.ToInt32(Console.ReadLine());
 
-Console.WriteLine("Enter the third number: ");
-int c = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("Enter the third number: ");
+// int c = Convert.ToInt32(Console.ReadLine());
 
-int max = a;
+// int max = a;
 
-if (b > max)
+// if (b > max)
+// {
+//     max = b;
+// }
+
+// if (c > max)
+// {
+//     max = c;
+// }
+
+// Console.WriteLine($"Maximum number: {max}");
+
+
+// Задача 6:
+// Напишите программу, которая на вход принимает число и выдаёт,
+// является ли число чётным (делится ли оно на два без остатка).
+
+Console.WriteLine("Enter a number: ");
+int num = Convert.ToInt32(Console.ReadLine());
+
+if (num % 2 == 0)
 {
-    max = b;
+    Console.WriteLine($"Number {num} is even");
 }
-
-if (c > max)
+else
 {
-    max = c;
+    Console.WriteLine($"Number {num} is not even");
 }
-
-Console.WriteLine($"Maximum number: {max}");
