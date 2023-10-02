@@ -52,3 +52,58 @@ double b2 = Convert.ToDouble(Console.ReadLine());
 Console.Write("Enter k2: ");
 double k2 = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine(Intersection(b1, k1, b2, k2));
+
+
+//*********************************************************************************************************
+// Решение задачи с семинара:
+// Найдите 2 максимальных значения в массиве.
+//*********************************************************************************************************
+
+int[] CreateArray(int min, int max, int size)
+{
+    int[] array = new int[size];
+    for (int i = 0; i < size; i++)
+    {
+        array[i] = new Random().Next(min, max + 1);
+    }
+    return array;
+}
+
+void ShowArray(int[] array)
+{
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write($"{array[i]} ");
+    }
+    Console.WriteLine();
+}
+
+int [] BubbleSort(int [] array)
+{
+    int  temp;
+    for (int i = 0; i < array.Length; i++)
+    {
+        for (int j = i + 1; j < array.Length; j++)
+        {
+            if (array[i] > array[j])
+            {
+                temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+        }
+    }
+    return array;
+}
+
+Console.WriteLine("Enter min of array value:  ");
+int min = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter max of array value:  ");
+int max = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Enter size of array value:  ");
+int size = Convert.ToInt32(Console.ReadLine());
+
+int[] newArray = CreateArray(min, max, size);
+ShowArray(newArray);
+BubbleSort(newArray);
+Console.WriteLine($"Two max element: {newArray[newArray.Length - 1]} and {newArray[newArray.Length - 2]}");
